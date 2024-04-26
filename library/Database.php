@@ -12,7 +12,7 @@ class Database
         // faz a conexão com o banco de dados
         try {
             $conn = new PDO(
-                "mysql:host=localhost;dbname=restaurante_povoado", 
+                "mysql:host=localhost;dbname=comandas", 
                 "root", 
                 "",
                 // define o padrão de codificação que será usado pelo banco de dados

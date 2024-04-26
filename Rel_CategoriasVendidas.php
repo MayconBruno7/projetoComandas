@@ -9,7 +9,7 @@
         $dataInicial = $_POST["data_inicial"];
         $dataFinal = $_POST["data_final"];
 
-        $pdo = new PDO('mysql:host=localhost;dbname=restaurante', 'root', '');
+        $pdo = new PDO('mysql:host=localhost;dbname=comandas', 'root', '');
 
         $sql = "SELECT 
                     Desc_Categoria,
@@ -25,7 +25,7 @@
                     FROM itens_comanda ic
                     LEFT JOIN comanda c ON (c.ID_COMANDA = ic.COMANDA_ID_COMANDA)
                     LEFT JOIN produto p ON (p.ID_PRODUTOS = ic.PRODUTOS_ID_PRODUTOS)
-                    LEFT JOIN produto_categoria pc ON (pc.ID_CATEGORIA = p.produtocategoria_id)
+                    LEFT JOIN produto_categoria pc ON (pc.ID_CATEGORIA = p.ID_PRODUTO_CATEGORIA)
 
                 WHERE
                     c.SITUACAO_COMANDA = 2

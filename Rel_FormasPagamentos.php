@@ -9,7 +9,7 @@
         $dataInicial = $_POST["data_inicial"];
         $dataFinal = $_POST["data_final"];
 
-        $pdo = new PDO('mysql:host=localhost;dbname=restaurante', 'root', '');
+        $pdo = new PDO('mysql:host=localhost;dbname=comandas', 'root', '');
 
         $sql = "SELECT 
                     fp.DESCRICAO_FORMA_PAGAMENTO,
